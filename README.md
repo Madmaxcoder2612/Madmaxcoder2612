@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Abhishek Potekar</h1>
+<h1 align="center">Hi 👋, I'm Abhishek Vijay Potekar</h1>
 <h3 align="center">A passionate Electronics Engineer</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=madmaxcoder2612&label=Profile%20views&color=0e75b6&style=flat" alt="madmaxcoder2612" /> </p>
