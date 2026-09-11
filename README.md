@@ -41,12 +41,3 @@
 </p>
 
 [![Abhishek Potekar's streak](https://github-readme-streak-stats.herokuapp.com/?user=Madmaxcoder2612&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0)](https://github.com/Madmaxcoder2612/github-readme-streak-stats)
-
-## 📊 My GitHub Stats
-
-[![Abhishek Potekar's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Madmaxcoder2612&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats)
-[![Abhishek Potekar's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Madmaxcoder2612&langs_count=8&count_private=true&layout=compact&theme=react&hide_border=true&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats)
-
-**Note:** Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
-
-[![Abhishek Potekar's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Madmaxcoder2612&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
