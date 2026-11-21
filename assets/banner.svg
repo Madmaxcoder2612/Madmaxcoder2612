@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" role="img" aria-labelledby="t d">
+  <title id="t">Abhishek Vijay Potekar, functional safety for robotics and embedded systems</title>
+  <desc id="d">An animated safety zone: a tool point slows down as it moves through a green, then amber zone and stops before the red zone around a hazard.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#150f2e"/>
+      <stop offset="1" stop-color="#0b0818"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#a78bfa" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="260" rx="16" fill="url(#bg)"/>
+  <rect width="900" height="260" rx="16" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="899" height="259" rx="15.5" fill="none" stroke="#8b5cf6" stroke-opacity="0.45"/>
+
+  <!-- text -->
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="44" y="98" font-size="38" font-weight="700" fill="url(#title)">Abhishek Vijay Potekar</text>
+    <text x="44" y="136" font-size="19" fill="#c4b5fd">Functional safety for robotics and embedded systems</text>
+    <text x="44" y="176" font-size="14" fill="#9ca3af">Master's in Electrical Engineering · University of Stuttgart</text>
+    <g font-size="12" font-weight="600">
+      <rect x="44" y="200" width="96" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-opacity="0.6"/>
+      <text x="92" y="217" text-anchor="middle" fill="#ddd6fe">ISO 13849</text>
+      <rect x="150" y="200" width="96" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-opacity="0.6"/>
+      <text x="198" y="217" text-anchor="middle" fill="#ddd6fe">IEC 61508</text>
+      <rect x="256" y="200" width="96" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-opacity="0.6"/>
+      <text x="304" y="217" text-anchor="middle" fill="#ddd6fe">ISO 10218</text>
+    </g>
+  </g>
+
+  <!-- safety zones around a hazard -->
+  <g transform="translate(770 130)">
+    <circle r="118" fill="#34d399" fill-opacity="0.07" stroke="#34d399" stroke-opacity="0.55" stroke-dasharray="4 6"/>
+    <circle r="82" fill="#fbbf24" fill-opacity="0.09" stroke="#fbbf24" stroke-opacity="0.6" stroke-dasharray="4 6"/>
+    <circle r="46" fill="#f87171" fill-opacity="0.14" stroke="#f87171" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.8;0.25;0.8" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="9" fill="#f87171">
+      <animate attributeName="r" values="9;12;9" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- tool point: slows down, stops before the red zone, returns -->
+  <g>
+    <line x1="560" y1="130" x2="705" y2="130" stroke="#a78bfa" stroke-opacity="0.25" stroke-dasharray="2 5"/>
+    <circle cy="130" r="7" fill="#34d399">
+      <animate attributeName="cx" dur="7s" repeatCount="indefinite" calcMode="spline"
+               values="560;650;690;704;704;560"
+               keyTimes="0;0.34;0.52;0.62;0.82;1"
+               keySplines="0.3 0 0.6 1;0.3 0 0.6 1;0.3 0 0.6 1;0 0 1 1;0.5 0 0.5 1"/>
+      <animate attributeName="fill" dur="7s" repeatCount="indefinite" calcMode="discrete"
+               values="#34d399;#34d399;#fbbf24;#f87171;#f87171;#34d399"
+               keyTimes="0;0.34;0.52;0.62;0.82;1"/>
+    </circle>
+    <text x="704" y="82" text-anchor="middle" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+          font-size="12" font-weight="700" fill="#f87171" opacity="0">
+      protective stop
+      <animate attributeName="opacity" dur="7s" repeatCount="indefinite"
+               values="0;0;1;1;0;0" keyTimes="0;0.6;0.66;0.8;0.86;1"/>
+    </text>
+  </g>
+</svg>

@@ -1,35 +1,32 @@
-# Hi, I'm Abhishek Vijay Potekar
+<p align="center">
+  <img src="assets/banner.svg" alt="Abhishek Vijay Potekar: functional safety for robotics and embedded systems" width="100%">
+</p>
 
-Master's student in Electrical Engineering at the University of Stuttgart, with a B.Tech in Electronics and Communication Engineering from LPU, Punjab. My background is hardware, IoT and cloud. I'm now building towards a career in **functional safety for robotics and embedded systems**.
+<p align="center">
+  <a href="https://madmaxcoder2612.github.io/portfolio/"><b>Portfolio</b></a> ·
+  <a href="https://www.linkedin.com/in/abhishek-vijay-potekar-027126193/"><b>LinkedIn</b></a> ·
+  <a href="mailto:ab.potekar@gmail.com"><b>Email</b></a>
+</p>
 
-Everything below is a learning project. Each one says what it does not prove, because I'd rather be honest about limits than overclaim.
+Hardware, IoT and cloud background (B.Tech ECE, LPU), now building towards **functional safety for robots and embedded systems**. Every project below is a learning project and says what it does not prove.
 
-**Portfolio:** [madmaxcoder2612.github.io/portfolio](https://madmaxcoder2612.github.io/portfolio/)
+<p align="center">
+  <img src="assets/chain.svg" alt="Traceability chain from hazard to required PL, safety function, requirement and test" width="100%">
+</p>
 
-## Functional safety and robotics
+### Safety and robotics
 
-| Project | What it is |
+| | |
 |---|---|
-| [cobot-hara-safety-concept](https://github.com/Madmaxcoder2612/cobot-hara-safety-concept) | Hazard analysis and safety concept for a collaborative robot cell (ISO 12100, ISO 13849-1), with an automated hazard-to-test traceability check, a stopping distance model and an achieved Performance Level calculation |
-| [ra0e3-safety-monitor](https://github.com/Madmaxcoder2612/ra0e3-safety-monitor) | Safety mechanisms in C99 on a Renesas FPB-RA0E3 (Cortex-M23), following IEC 61508 and IEC 60730 patterns. Not certified, early stage |
-| [mems-imu-calibration](https://github.com/Madmaxcoder2612/mems-imu-calibration) | MEMS IMU calibration and five orientation filters in base MATLAB, checked against a simulated ground truth |
+| 🦾 **[cobot-hara-safety-concept](https://github.com/Madmaxcoder2612/cobot-hara-safety-concept)** | Hazard analysis and safety concept for a cobot cell, with traceability check, stopping distance and achieved PL |
+| 🔧 **[ra0e3-safety-monitor](https://github.com/Madmaxcoder2612/ra0e3-safety-monitor)** | Safety mechanisms in C on a Cortex-M23 board (not certified) |
+| 🧭 **[mems-imu-calibration](https://github.com/Madmaxcoder2612/mems-imu-calibration)** | IMU calibration and five orientation filters in MATLAB |
 
-## Quantum computing
+### Quantum computing
 
-| Project | What it is |
+| | |
 |---|---|
-| [qiskit-fall-fest-2026-quantum-thinkers](https://github.com/Madmaxcoder2612/qiskit-fall-fest-2026-quantum-thinkers) | Team entry at Qiskit Fall Fest 2026: GHZ states on a noisy IBM Heron simulator and on real hardware |
-| [qiskit-bell-ghz-grover](https://github.com/Madmaxcoder2612/qiskit-bell-ghz-grover) | Bell, GHZ and Grover circuits, tested against theory and simulated with and without noise |
-| [qiskit-teleportation](https://github.com/Madmaxcoder2612/qiskit-teleportation) | Quantum teleportation with dynamic circuits, an exact statevector test and a noise sweep |
+| ⚛️ **[qiskit-fall-fest-2026-quantum-thinkers](https://github.com/Madmaxcoder2612/qiskit-fall-fest-2026-quantum-thinkers)** | GHZ states on an IBM Heron simulator and real hardware |
+| 🔬 **[qiskit-bell-ghz-grover](https://github.com/Madmaxcoder2612/qiskit-bell-ghz-grover)** · **[qiskit-teleportation](https://github.com/Madmaxcoder2612/qiskit-teleportation)** | Textbook circuits with tests and noise |
 
-## How I work
-
-- One repository per project, with a README, tests and CI
-- Assumptions and limitations written down, not hidden
-- Only my own or openly licensed material
-
-## Contact
-
-- [LinkedIn](https://www.linkedin.com/in/abhishek-vijay-potekar-027126193/)
-- Email: [ab.potekar@gmail.com](mailto:ab.potekar@gmail.com)
-- Based in Stuttgart, Germany
+<sub>Stuttgart, Germany · one repo per project, with a README, tests, CI and written-down limitations</sub>

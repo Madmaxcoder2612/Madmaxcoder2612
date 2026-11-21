@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150" width="900" height="150" role="img" aria-labelledby="t d">
+  <title id="t">From hazard to test</title>
+  <desc id="d">The traceability chain used in the cobot safety project: hazard, required performance level, safety function, requirement and test. A marker travels along the chain.</desc>
+  <rect width="900" height="150" rx="16" fill="#0f0b1e"/>
+  <rect x="0.5" y="0.5" width="899" height="149" rx="15.5" fill="none" stroke="#8b5cf6" stroke-opacity="0.45"/>
+
+  <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- connecting line -->
+    <line x1="100" y1="62" x2="800" y2="62" stroke="#a78bfa" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 6">
+      <animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- nodes -->
+    <g>
+      <rect x="35"  y="34" width="130" height="56" rx="10" fill="#1b1436" stroke="#f87171" stroke-opacity="0.8"/>
+      <text x="100" y="58" font-size="15" font-weight="700" fill="#fecaca">Hazard</text>
+      <text x="100" y="77" font-size="11" fill="#9ca3af">S · F · P rating</text>
+    </g>
+    <g>
+      <rect x="210" y="34" width="130" height="56" rx="10" fill="#1b1436" stroke="#fbbf24" stroke-opacity="0.8"/>
+      <text x="275" y="58" font-size="15" font-weight="700" fill="#fde68a">Required PL</text>
+      <text x="275" y="77" font-size="11" fill="#9ca3af">ISO 13849-1 risk graph</text>
+    </g>
+    <g>
+      <rect x="385" y="34" width="130" height="56" rx="10" fill="#1b1436" stroke="#a78bfa" stroke-opacity="0.9"/>
+      <text x="450" y="58" font-size="15" font-weight="700" fill="#ddd6fe">Safety function</text>
+      <text x="450" y="77" font-size="11" fill="#9ca3af">target PL d, category 3</text>
+    </g>
+    <g>
+      <rect x="560" y="34" width="130" height="56" rx="10" fill="#1b1436" stroke="#60a5fa" stroke-opacity="0.8"/>
+      <text x="625" y="58" font-size="15" font-weight="700" fill="#bfdbfe">Requirement</text>
+      <text x="625" y="77" font-size="11" fill="#9ca3af">20 requirements</text>
+    </g>
+    <g>
+      <rect x="735" y="34" width="130" height="56" rx="10" fill="#1b1436" stroke="#34d399" stroke-opacity="0.8"/>
+      <text x="800" y="58" font-size="15" font-weight="700" fill="#a7f3d0">Test</text>
+      <text x="800" y="77" font-size="11" fill="#9ca3af">20 test cases</text>
+    </g>
+
+    <!-- marker travelling along the chain -->
+    <circle cy="62" r="6" fill="#ffffff" opacity="0.95">
+      <animate attributeName="cx" dur="6s" repeatCount="indefinite" values="100;800" keyTimes="0;1"/>
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.08;0.92;1"/>
+    </circle>
+
+    <text x="450" y="124" font-size="12.5" fill="#c4b5fd">Checked automatically in CI: a gap anywhere in the chain fails the build</text>
+  </g>
+</svg>
