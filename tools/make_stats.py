@@ -20,6 +20,8 @@ LEVEL_COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 LANG_COLORS = ["#5bcdec", "#3fb950", "#d29922", "#388bfd", "#f778ba", "#8b949e"]
 FONT = "'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
 CELL, GAP = 12, 3
+SWEEP_SECONDS = 12  # one full cycle: the sweep takes 80 percent of it, then a short rest
+FLASH = "#5bcdec"
 # Notebook files are mostly saved output (images, tables), so their size says
 # little about how much code was written.
 SKIP_LANGUAGES = {"Jupyter Notebook"}
@@ -121,16 +123,38 @@ def render(data, today=None):
             f'text-anchor="end" fill="#8b949e">{label}</text>'
         )
     seen_month = None
+    n_weeks = max(w for _, _, _, w in days) + 1
     for d, count, weekday, week in days:
         cx = x0 + week * (CELL + GAP)
         cy = y0 + weekday * (CELL + GAP)
         if weekday == 0 and d.month != seen_month:
             seen_month = d.month
             parts.append(f'<text x="{cx}" y="{y0 - 8}" font-size="10" fill="#8b949e">{MONTHS[d.month - 1]}</text>')
+        base = LEVEL_COLORS[level(count, peak)]
+        flash = ""
+        if count > 0:
+            # The sweep reaches week w at this share of the cycle.
+            t = 0.02 + 0.76 * week / max(n_weeks - 1, 1)
+            flash = (
+                f'<animate attributeName="fill" dur="{SWEEP_SECONDS}s" repeatCount="indefinite" '
+                f'values="{base};{base};{FLASH};{base};{base}" '
+                f'keyTimes="0;{max(t - 0.015, 0):.4f};{t:.4f};{min(t + 0.06, 1):.4f};1"/>'
+            )
         parts.append(
             f'<rect x="{cx}" y="{cy}" width="{CELL}" height="{CELL}" rx="2" '
-            f'fill="{LEVEL_COLORS[level(count, peak)]}"><title>{d.isoformat()}: {count}</title></rect>'
+            f'fill="{base}"><title>{d.isoformat()}: {count}</title>{flash}</rect>'
         )
+
+    # light curtain: a thin bar that sweeps over the graph, like the sensor on a robot cell
+    span = (n_weeks - 1) * (CELL + GAP)
+    parts.append(
+        f'<rect y="{y0 - 4}" width="2.5" height="{7 * (CELL + GAP) + 3}" rx="1.25" fill="{FLASH}" opacity="0">'
+        f'<animate attributeName="x" dur="{SWEEP_SECONDS}s" repeatCount="indefinite" '
+        f'values="{x0};{x0 + span};{x0 + span}" keyTimes="0;0.8;1"/>'
+        f'<animate attributeName="opacity" dur="{SWEEP_SECONDS}s" repeatCount="indefinite" '
+        f'values="0;0.9;0.9;0;0" keyTimes="0;0.02;0.78;0.8;1"/>'
+        f'</rect>'
+    )
 
     # language bar
     langs = languages(data)
