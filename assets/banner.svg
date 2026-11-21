@@ -45,19 +45,19 @@
   <!-- tool point: slows down, stops before the red zone, returns -->
   <g>
     <line x1="560" y1="130" x2="705" y2="130" stroke="#5bcdec" stroke-opacity="0.25" stroke-dasharray="2 5"/>
-    <circle cy="130" r="7" fill="#34d399">
-      <animate attributeName="cx" dur="7s" repeatCount="indefinite" calcMode="spline"
+    <circle cy="130" r="9" fill="#34d399">
+      <animate attributeName="cx" dur="5s" repeatCount="indefinite" calcMode="spline"
                values="560;650;690;704;704;560"
                keyTimes="0;0.34;0.52;0.62;0.82;1"
                keySplines="0.3 0 0.6 1;0.3 0 0.6 1;0.3 0 0.6 1;0 0 1 1;0.5 0 0.5 1"/>
-      <animate attributeName="fill" dur="7s" repeatCount="indefinite" calcMode="discrete"
+      <animate attributeName="fill" dur="5s" repeatCount="indefinite" calcMode="discrete"
                values="#34d399;#34d399;#fbbf24;#f87171;#f87171;#34d399"
                keyTimes="0;0.34;0.52;0.62;0.82;1"/>
     </circle>
     <text x="704" y="82" text-anchor="middle" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
           font-size="12" font-weight="700" fill="#f87171" opacity="0">
       protective stop
-      <animate attributeName="opacity" dur="7s" repeatCount="indefinite"
+      <animate attributeName="opacity" dur="5s" repeatCount="indefinite"
                values="0;0;1;1;0;0" keyTimes="0;0.6;0.66;0.8;0.86;1"/>
     </text>
   </g>

@@ -20,7 +20,7 @@ LEVEL_COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 LANG_COLORS = ["#5bcdec", "#3fb950", "#d29922", "#388bfd", "#f778ba", "#8b949e"]
 FONT = "'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
 CELL, GAP = 12, 3
-SWEEP_SECONDS = 12  # one full cycle: the sweep takes 80 percent of it, then a short rest
+SWEEP_SECONDS = 6  # one full cycle: the sweep takes 80 percent of it, then a short rest
 FLASH = "#5bcdec"
 # Notebook files are mostly saved output (images, tables), so their size says
 # little about how much code was written.
@@ -105,6 +105,13 @@ def render(data, today=None):
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 376" width="900" height="376" '
         'role="img" aria-labelledby="t">'
         '<title id="t">GitHub contributions in the last year, streaks and top languages</title>'
+        '<defs>'
+        '<filter id="glow" x="-400%" y="-10%" width="900%" height="120%"><feGaussianBlur stdDeviation="3.5"/></filter>'
+        '<linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">'
+        f'<stop offset="0" stop-color="{FLASH}" stop-opacity="0"/>'
+        f'<stop offset="1" stop-color="{FLASH}" stop-opacity="0.28"/>'
+        '</linearGradient>'
+        '</defs>'
         '<rect width="900" height="376" rx="16" fill="#0d1117"/>'
         '<rect x="0.5" y="0.5" width="899" height="375" rx="15.5" fill="none" stroke="#30363d"/>'
         f'<g font-family="{FONT}">'
@@ -135,26 +142,42 @@ def render(data, today=None):
         if count > 0:
             # The sweep reaches week w at this share of the cycle.
             t = 0.02 + 0.76 * week / max(n_weeks - 1, 1)
+            kt = f"0;{max(t - 0.015, 0):.4f};{t:.4f};{min(t + 0.14, 1):.4f};1"
+            common = f'dur="{SWEEP_SECONDS}s" repeatCount="indefinite" keyTimes="{kt}"'
+            pop = 3  # pixels the square grows on each side while it flashes
             flash = (
-                f'<animate attributeName="fill" dur="{SWEEP_SECONDS}s" repeatCount="indefinite" '
-                f'values="{base};{base};{FLASH};{base};{base}" '
-                f'keyTimes="0;{max(t - 0.015, 0):.4f};{t:.4f};{min(t + 0.06, 1):.4f};1"/>'
+                f'<animate attributeName="fill" {common} values="{base};{base};{FLASH};{base};{base}"/>'
+                f'<animate attributeName="x" {common} values="{cx};{cx};{cx - pop};{cx};{cx}"/>'
+                f'<animate attributeName="y" {common} values="{cy};{cy};{cy - pop};{cy};{cy}"/>'
+                f'<animate attributeName="width" {common} values="{CELL};{CELL};{CELL + 2 * pop};{CELL};{CELL}"/>'
+                f'<animate attributeName="height" {common} values="{CELL};{CELL};{CELL + 2 * pop};{CELL};{CELL}"/>'
             )
         parts.append(
             f'<rect x="{cx}" y="{cy}" width="{CELL}" height="{CELL}" rx="2" '
             f'fill="{base}"><title>{d.isoformat()}: {count}</title>{flash}</rect>'
         )
 
-    # light curtain: a thin bar that sweeps over the graph, like the sensor on a robot cell
+    # light curtain: a glowing bar with a fading trail that sweeps over the graph,
+    # like the sensor on a robot cell
     span = (n_weeks - 1) * (CELL + GAP)
-    parts.append(
-        f'<rect y="{y0 - 4}" width="2.5" height="{7 * (CELL + GAP) + 3}" rx="1.25" fill="{FLASH}" opacity="0">'
+    gx, gy, gh = x0 - 2, y0 - 6, 7 * (CELL + GAP) + 9
+    move = (
         f'<animate attributeName="x" dur="{SWEEP_SECONDS}s" repeatCount="indefinite" '
-        f'values="{x0};{x0 + span};{x0 + span}" keyTimes="0;0.8;1"/>'
-        f'<animate attributeName="opacity" dur="{SWEEP_SECONDS}s" repeatCount="indefinite" '
-        f'values="0;0.9;0.9;0;0" keyTimes="0;0.02;0.78;0.8;1"/>'
-        f'</rect>'
+        '{values}' ' keyTimes="0;0.8;1"/>'
     )
+    fade = (
+        f'<animate attributeName="opacity" dur="{SWEEP_SECONDS}s" repeatCount="indefinite" '
+        'values="0;1;1;0;0" keyTimes="0;0.02;0.78;0.8;1"/>'
+    )
+    parts.append(f'<clipPath id="graph"><rect x="{gx}" y="{gy}" width="{span + CELL + 4}" height="{gh}"/></clipPath>')
+    parts.append('<g clip-path="url(#graph)">')
+    parts.append(f'<rect y="{gy}" width="70" height="{gh}" fill="url(#trail)" opacity="0">'
+                 + move.format(values=f'values="{x0 - 70};{x0 + span - 70};{x0 + span - 70}"') + fade + '</rect>')
+    parts.append(f'<rect y="{gy}" width="9" height="{gh}" rx="4.5" fill="{FLASH}" filter="url(#glow)" opacity="0">'
+                 + move.format(values=f'values="{x0 - 3};{x0 + span - 3};{x0 + span - 3}"') + fade + '</rect>')
+    parts.append(f'<rect y="{gy}" width="3" height="{gh}" rx="1.5" fill="#ffffff" opacity="0">'
+                 + move.format(values=f'values="{x0};{x0 + span};{x0 + span}"') + fade + '</rect>')
+    parts.append('</g>')
 
     # language bar
     langs = languages(data)
