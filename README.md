@@ -1,43 +1,35 @@
-# Hi 👋, I'm Abhishek Vijay Potekar
+# Hi, I'm Abhishek Vijay Potekar
 
-### A passionate Electronics Engineer
+Master's student in Electrical Engineering at the University of Stuttgart, with a B.Tech in Electronics and Communication Engineering from LPU, Punjab. My background is hardware, IoT and cloud. I'm now building towards a career in **functional safety for robotics and embedded systems**.
 
-[![madmaxcoder2612](https://komarev.com/ghpvc/?username=madmaxcoder2612&label=Profile%20views&color=0e75b6&style=flat)](https://github.com/Madmaxcoder2612)
+Everything below is a learning project. Each one says what it does not prove, because I'd rather be honest about limits than overclaim.
 
-- 🌱 I'm currently learning **Web Development, Image Processing**
-- 📫 How to reach me **<ab.potekar@gmail.com>**
+**Portfolio:** [madmaxcoder2612.github.io/portfolio](https://madmaxcoder2612.github.io/portfolio/)
 
-### Connect with me:
+## Functional safety and robotics
 
-<p align="left">
-<a href="https://twitter.com/potekar_abhi" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="potekar_abhi" height="30" width="40" /></a>
-<a href="https://www.linkedin.com/in/abhishek-vijay-potekar-027126193/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="abhishek-vijay-potekar-027126193" height="30" width="40" /></a>
-<a href="https://www.codechef.com/users/raiden_2612" target="_blank"><img align="center" src="https://cdn.simpleicons.org/codechef/5B4638" alt="raiden_2612" height="30" width="30" /></a>
-<a href="https://www.hackerrank.com/ab_potekar" target="_blank"><img align="center" src="https://cdn.simpleicons.org/hackerrank/2EC866" alt="ab_potekar" height="30" width="30" /></a>
-</p>
+| Project | What it is |
+|---|---|
+| [cobot-hara-safety-concept](https://github.com/Madmaxcoder2612/cobot-hara-safety-concept) | Hazard analysis and safety concept for a collaborative robot cell (ISO 12100, ISO 13849-1), with an automated hazard-to-test traceability check, a stopping distance model and an achieved Performance Level calculation |
+| [ra0e3-safety-monitor](https://github.com/Madmaxcoder2612/ra0e3-safety-monitor) | Safety mechanisms in C99 on a Renesas FPB-RA0E3 (Cortex-M23), following IEC 61508 and IEC 60730 patterns. Not certified, early stage |
+| [mems-imu-calibration](https://github.com/Madmaxcoder2612/mems-imu-calibration) | MEMS IMU calibration and five orientation filters in base MATLAB, checked against a simulated ground truth |
 
-### Languages and Tools:
+## Quantum computing
 
-<p align="left">
-<a href="https://www.arduino.cc/" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/></a>
-<a href="https://azure.microsoft.com/en-in/" target="_blank"><img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/></a>
-<a href="https://getbootstrap.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/></a>
-<a href="https://www.cprogramming.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/></a>
-<a href="https://www.w3schools.com/cpp/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/></a>
-<a href="https://www.w3schools.com/css/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/></a>
-<a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/></a>
-<a href="https://flask.palletsprojects.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg" alt="flask" width="40" height="40"/></a>
-<a href="https://cloud.google.com" target="_blank"><img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/></a>
-<a href="https://www.w3.org/html/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/></a>
-<a href="https://ifttt.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/ifttt/ifttt-ar21.svg" alt="ifttt" width="40" height="40"/></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
-<a href="https://www.mathworks.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/></a>
-<a href="https://opencv.org/" target="_blank"><img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/></a>
-<a href="https://www.oracle.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/></a>
-<a href="https://pandas.pydata.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/></a>
-<a href="https://www.python.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/></a>
-<a href="https://scikit-learn.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/></a>
-<a href="https://seaborn.pydata.org/" target="_blank"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/></a>
-</p>
+| Project | What it is |
+|---|---|
+| [qiskit-fall-fest-2026-quantum-thinkers](https://github.com/Madmaxcoder2612/qiskit-fall-fest-2026-quantum-thinkers) | Team entry at Qiskit Fall Fest 2026: GHZ states on a noisy IBM Heron simulator and on real hardware |
+| [qiskit-bell-ghz-grover](https://github.com/Madmaxcoder2612/qiskit-bell-ghz-grover) | Bell, GHZ and Grover circuits, tested against theory and simulated with and without noise |
+| [qiskit-teleportation](https://github.com/Madmaxcoder2612/qiskit-teleportation) | Quantum teleportation with dynamic circuits, an exact statevector test and a noise sweep |
 
-[![Abhishek Potekar's streak](https://github-readme-streak-stats.herokuapp.com/?user=Madmaxcoder2612&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0)](https://github.com/Madmaxcoder2612/github-readme-streak-stats)
+## How I work
+
+- One repository per project, with a README, tests and CI
+- Assumptions and limitations written down, not hidden
+- Only my own or openly licensed material
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/abhishek-vijay-potekar-027126193/)
+- Email: [ab.potekar@gmail.com](mailto:ab.potekar@gmail.com)
+- Based in Stuttgart, Germany
