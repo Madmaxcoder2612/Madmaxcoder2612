@@ -3,34 +3,30 @@
   <desc id="d">An animated safety zone: a tool point slows down as it moves through a green, then amber zone and stops before the red zone around a hazard.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#150f2e"/>
-      <stop offset="1" stop-color="#0b0818"/>
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
     </linearGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#c4b5fd"/>
+      <stop offset="1" stop-color="#5bcdec"/>
     </linearGradient>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M30 0H0V30" fill="none" stroke="#a78bfa" stroke-opacity="0.07"/>
-    </pattern>
   </defs>
 
   <rect width="900" height="260" rx="16" fill="url(#bg)"/>
-  <rect width="900" height="260" rx="16" fill="url(#grid)"/>
-  <rect x="0.5" y="0.5" width="899" height="259" rx="15.5" fill="none" stroke="#8b5cf6" stroke-opacity="0.45"/>
+  <rect x="0.5" y="0.5" width="899" height="259" rx="15.5" fill="none" stroke="#30363d"/>
 
   <!-- text -->
   <g font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
     <text x="44" y="98" font-size="38" font-weight="700" fill="url(#title)">Abhishek Vijay Potekar</text>
-    <text x="44" y="136" font-size="19" fill="#c4b5fd">Functional safety for robotics and embedded systems</text>
+    <text x="44" y="136" font-size="19" fill="#5bcdec">Functional safety for robotics and embedded systems</text>
     <text x="44" y="176" font-size="14" fill="#9ca3af">Master's in Electrical Engineering · University of Stuttgart</text>
     <g font-size="12" font-weight="600">
-      <rect x="44" y="200" width="96" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-opacity="0.6"/>
-      <text x="92" y="217" text-anchor="middle" fill="#ddd6fe">ISO 13849</text>
-      <rect x="150" y="200" width="96" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-opacity="0.6"/>
-      <text x="198" y="217" text-anchor="middle" fill="#ddd6fe">IEC 61508</text>
-      <rect x="256" y="200" width="96" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-opacity="0.6"/>
-      <text x="304" y="217" text-anchor="middle" fill="#ddd6fe">ISO 10218</text>
+      <rect x="44" y="200" width="96" height="26" rx="13" fill="#5bcdec" fill-opacity="0.18" stroke="#5bcdec" stroke-opacity="0.6"/>
+      <text x="92" y="217" text-anchor="middle" fill="#b4e8f6">ISO 13849</text>
+      <rect x="150" y="200" width="96" height="26" rx="13" fill="#5bcdec" fill-opacity="0.18" stroke="#5bcdec" stroke-opacity="0.6"/>
+      <text x="198" y="217" text-anchor="middle" fill="#b4e8f6">IEC 61508</text>
+      <rect x="256" y="200" width="96" height="26" rx="13" fill="#5bcdec" fill-opacity="0.18" stroke="#5bcdec" stroke-opacity="0.6"/>
+      <text x="304" y="217" text-anchor="middle" fill="#b4e8f6">ISO 10218</text>
     </g>
   </g>
 
@@ -48,7 +44,7 @@
 
   <!-- tool point: slows down, stops before the red zone, returns -->
   <g>
-    <line x1="560" y1="130" x2="705" y2="130" stroke="#a78bfa" stroke-opacity="0.25" stroke-dasharray="2 5"/>
+    <line x1="560" y1="130" x2="705" y2="130" stroke="#5bcdec" stroke-opacity="0.25" stroke-dasharray="2 5"/>
     <circle cy="130" r="7" fill="#34d399">
       <animate attributeName="cx" dur="7s" repeatCount="indefinite" calcMode="spline"
                values="560;650;690;704;704;560"
